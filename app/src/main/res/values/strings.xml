@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="no_internet_connection">Please check Internet Connection</string>
+    <string name="went_wrong">Something went wrong</string>
+    <string name="auth_failure">Session Expired. Please login again</string>
+    <string name="blue_name">Welcome</string>
+</resources>

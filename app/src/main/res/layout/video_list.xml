@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.rapido.modules.mostPopular.MostPopularViewModel" />
+
+        <variable
+            name="model"
+            type="com.example.rapido.response.popularVideos.Item" />
+
+        <import type="android.view.View" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/ic_sound_equalizer"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_video_time"
+            app:layout_constraintEnd_toStartOf="@+id/tv_video_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_video_time" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="1:09"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_thumbnail"
+            app:layout_constraintEnd_toEndOf="@+id/iv_thumbnail" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_thumbnail">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_channel_logo"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/channel_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_video_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_channel_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text='@{model.snippet.title}'
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                android:textColor="@color/comment_background"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_menu"
+                app:layout_constraintStart_toEndOf="@+id/iv_channel_logo"
+                app:layout_constraintTop_toTopOf="@+id/iv_channel_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="@dimen/_7sdp"
+                android:text="T series -"
+                app:layout_constraintStart_toEndOf="@+id/iv_channel_logo"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_video_view_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="6.8M views -"
+                android:textSize="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_channel_name"
+                app:layout_constraintStart_toEndOf="@+id/tv_channel_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_channel_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_upload_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="1 year ago"
+                android:textSize="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_video_view_count"
+                app:layout_constraintStart_toEndOf="@+id/tv_video_view_count"
+                app:layout_constraintTop_toTopOf="@+id/tv_video_view_count" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

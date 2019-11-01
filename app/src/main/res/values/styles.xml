@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+
+
+    <resources>
+
+
+    <style parent="Theme.AppCompat.Light.NoActionBar" name="AppTheme">
+
+    <item name="colorPrimary">@color/colorAccent</item>
+
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+    <item name="colorAccent">@color/colorAccent</item>
+
+    <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat</item>
+
+    <item name="android:popupMenuStyle">@style/PopupMenu</item>
+
+    <item name="popupMenuStyle">@style/PopupMenu</item>
+
+    <item name="textAppearanceLargePopupMenu">@style/VideoOptionsTextAppearanceLarge</item>
+
+    <item name="android:textAppearanceLargePopupMenu">@style/VideoOptionsTextAppearanceLarge</item>
+
+    <item name="textAppearanceSmallPopupMenu">@style/VideoOptionsTextAppearanceSmall</item>
+
+    <item name="android:textAppearanceSmallPopupMenu">@style/VideoOptionsTextAppearanceSmall</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Main Activity -->
+
+
+
+    <style parent="AppTheme" name="NoActionBarActivityTheme">
+
+    <item name="windowActionBar">false</item>
+
+    <item name="windowNoTitle">true</item>
+
+
+
+</style>
+
+
+    <style parent="AppTheme" name="BlockedVideoTextView">
+
+    <item name="android:padding">7dp</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Video Grid -->
+
+
+
+    -<style parent="AppTheme" name="GridTextView">
+
+    <item name="android:layout_width">match_parent</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+    <item name="android:textColor">@color/video_cell_text_main</item>
+
+</style>
+
+
+    -<style parent="GridTextView" name="GridTitleTextView">
+
+    <item name="android:background">@color/video_cell_background</item>
+
+</style>
+
+
+    -<style parent="GridTextView" name="GridMicroDetailsTextView">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:padding">2dp</item>
+
+    <item name="android:background">#BA111517</item>
+
+    <item name="android:singleLine">true</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+
+    -<style parent="GridTextView" name="GridDetailsTextView">
+
+    <item name="android:textColor">@color/video_cell_text_details</item>
+
+    <item name="android:singleLine">true</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+
+    -<style parent="@android:style/Widget.PopupMenu" name="PopupMenu">
+
+    <item name="android:popupBackground">@color/popup_menu</item>
+
+</style>
+
+
+    -<style parent="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" name="VideoOptionsTextAppearanceLarge">
+
+    <item name="android:textColor">@color/video_cell_text_main</item>
+
+</style>
+
+
+    -<style parent="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small" name="VideoOptionsTextAppearanceSmall">
+
+    <item name="android:textColor">@color/video_cell_text_main</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Subs Drawer -->
+
+
+
+    -
+
+
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Video Player: v1 and v2 -->
+
+
+
+    <style parent="AppTheme" name="VideoPlayerActivityTheme">
+
+    <item name="android:windowFullscreen">true</item>
+
+    <item name="windowActionBarOverlay">true</item>
+
+    <item name="actionBarStyle">@style/VideoPlayerActionBarTheme</item>
+
+</style>
+
+
+    <style parent="AppTheme" name="VideoPlayerActionBarTheme">
+
+    <item name="background">@color/video_player_hud</item>
+
+    <!-- Actionbar background colour -->
+
+
+    <item name="displayOptions">showHome|homeAsUp|showTitle</item>
+
+</style>
+
+    <!-- Video Description -->
+
+
+
+    <style parent="AppTheme" name="VideoDescTextView">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:textColor">@color/video_player_drawer_text</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+    <!-- Comments -->
+
+
+
+    <style parent="AppTheme" name="CommentTextView">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:textColor">@color/comment_text</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+
+    -<style parent="CommentTextView" name="CommentInfoTextView">
+
+    <item name="android:textSize">12sp</item>
+
+</style>
+
+    <style parent="CommentTextView" name="NoCommentsMsgTextView"> </style>
+
+    <!-- Volume / Brightness indicator -->
+
+
+    <style parent="LoadingProgressBar" name="VideoPlayerIndicator"/>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Video Player: v1 and v2 -->
+
+
+
+    -<style parent="AppTheme" name="VideoPlayerSeekBarTetView">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">match_parent</item>
+
+    <item name="android:gravity">center_vertical</item>
+
+    <item name="android:paddingLeft">8dp</item>
+
+    <item name="android:paddingRight">8dp</item>
+
+    <item name="android:textColor">#FFBEBEBE</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+    <item name="android:textStyle">bold</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Video Player Tutorial -->
+
+
+
+    <style parent="AppTheme" name="HandGestureImageView">
+
+    <item name="android:layout_width">@dimen/_15sdp</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:scaleType">fitXY</item>
+
+    <item name="android:adjustViewBounds">true</item>
+
+    <item name="android:layout_marginBottom">8dp</item>
+
+    <item name="android:layout_marginEnd">8dp</item>
+
+    <item name="android:layout_marginLeft">8dp</item>
+
+    <item name="android:layout_marginRight">8dp</item>
+
+    <item name="android:layout_marginStart">8dp</item>
+
+</style>
+
+
+    -<style parent="@style/TextAppearance.AppCompat.Medium.Inverse" name="TutorialTextView">
+
+    <item name="android:layout_width">0dp</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:padding">8dp</item>
+
+    <item name="android:gravity">center_horizontal</item>
+
+    <item name="android:text">Tutorial text goes here.</item>
+
+    <item name="android:layout_marginBottom">8dp</item>
+
+    <item name="android:layout_marginEnd">8dp</item>
+
+    <item name="android:layout_marginLeft">8dp</item>
+
+    <item name="android:layout_marginRight">8dp</item>
+
+    <item name="android:layout_marginStart">8dp</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Channel Browser -->
+
+
+
+    -<style parent="AppTheme" name="ChannelSubsTextView">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:textColor">@color/channel_subs</item>
+
+    <item name="android:background">@color/channel_subscribers_bkg</item>
+
+    <item name="android:singleLine">true</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+
+    -<style parent="AppTheme" name="ChannelAboutTextView">
+
+    <item name="android:textColor">@color/channel_about</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+
+    -<style parent="ChannelSubsTextView" name="PlaylistTitleTextView">
+
+    <item name="android:paddingTop">3dp</item>
+
+    <item name="android:paddingBottom">3dp</item>
+
+    <item name="android:paddingLeft">3dp</item>
+
+    <item name="android:paddingRight">7dp</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Subscriptions Feed Tab -->
+
+
+
+    -<style parent="AppTheme" name="NoSubscriptionsFeedMsgTextView">
+
+    <item name="android:layout_width">match_parent</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:gravity">center</item>
+
+    <item name="android:layout_marginTop">80dp</item>
+
+    <item name="android:layout_marginLeft">20dp</item>
+
+    <item name="android:layout_marginRight">20dp</item>
+
+    <item name="android:textColor">@color/feed_message_text</item>
+
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+
+</style>
+
+
+    <style parent="AppTheme" name="ImportSubscriptionsButton">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:layout_gravity">center_horizontal</item>
+
+    <item name="android:layout_marginTop">20dp</item>
+
+</style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Bookmarks Tab -->
+
+
+    <style parent="NoSubscriptionsFeedMsgTextView" name="NoBookmarksMsgTextView"> </style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--Downloads Tab -->
+
+
+    <style parent="NoSubscriptionsFeedMsgTextView" name="NoDownloadsMsgTextView"> </style>
+
+    <!-- *************************************************************************************** -->
+
+
+    <!--PermissionsActivity / Transparent Activity -->
+
+
+
+    -<style parent="AppTheme" name="TransparentActivity">
+
+    <item name="android:windowIsTranslucent">true</item>
+
+    <item name="android:windowBackground">@android:color/transparent</item>
+
+    <item name="android:windowContentOverlay">@null</item>
+
+    <item name="android:windowNoTitle">true</item>
+
+    <item name="android:windowIsFloating">true</item>
+
+    <item name="android:backgroundDimEnabled">false</item>
+
+</style>
+
+
+
+    <style parent="AppTheme" name="LoadingProgressBar">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:padding">5dp</item>
+
+
+</style>
+
+
+</resources>
+
