@@ -269,6 +269,7 @@ public class SplashActivity extends AppCompatActivity implements EasyPermissions
             }
 
             try {
+                SPManager.getInstance().setAccessToken(String.format("Bearer %s", mCredential.getToken()));
 
                 token = mCredential.getToken();
             } catch (GoogleAuthException e) {
